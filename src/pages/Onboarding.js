@@ -80,27 +80,27 @@ export const Onboarding = () => {
         </Route>
         <Route path={`${path}/Step-3`}>
           <WizardStep title="Step 3">
-            <TitleAndAccessForm prev={prevStep(3)} next={nextStep(3)} />
+            <TitleAndAccessForm formKey="titleAccess" formData={formData} prev={prevStep(3)} next={nextStep(3)} />
           </WizardStep>
         </Route>
         <Route path={`${path}/Step-4`}>
           <WizardStep title="Step 4">
-            <BusinessIdentifierForm  prev={prevStep(4)} next={nextStep(4)} />
+            <BusinessIdentifierForm  formKey="businessIdentifier" formData={formData} prev={prevStep(4)} next={nextStep(4)} />
           </WizardStep>
         </Route>
         <Route path={`${path}/Step-5`}>
           <WizardStep title="Step 5">
-            <BusinessAddressForm prev={prevStep(5)} next={nextStep(5)} />
+            <BusinessAddressForm formKey="businessAddress" formData={formData} prev={prevStep(5)} next={nextStep(5)} />
           </WizardStep>
         </Route>
         <Route path={`${path}/Step-6`}>
           <WizardStep title="Step 6">
-            <BusinessIndustryForm prev={prevStep(6)} next={nextStep(6)} />
+            <BusinessIndustryForm formKey="businessIndustry" formData={formData} prev={prevStep(6)} next={nextStep(6)} />
           </WizardStep>
         </Route>
         <Route path={`${path}/Step-7`}>
           <WizardStep title="Step 7" >
-            <BusinessSizeForm prev={prevStep(7)} next={nextStep(7)} />
+            <BusinessSizeForm formKey="businessSize" formData={formData} prev={prevStep(7)} next={nextStep(7)} />
           </WizardStep>
         </Route>
       </Switch>
