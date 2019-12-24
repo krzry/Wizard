@@ -6,7 +6,7 @@ import {
   useHistory,
   useLocation
 } from "react-router-dom";
-
+import useLocalStorage from '../../src/hooks/useLocalStorage' 
 //Form Components
 import { NameForm } from "../forms/NameForm";
 import { EmailForm } from "../forms/EmailForm";
@@ -34,7 +34,8 @@ export const Onboarding = () => {
   const history = useHistory();
   const location = useLocation();
 
-  const [formData, setFormData] = React.useState({});
+  // const [formData, setFormData] = React.useState({});
+  const [formData, setFormData] = useLocalStorage('onboardingData', {})
 
   React.useEffect(() => {
     //if not on valid step, update
